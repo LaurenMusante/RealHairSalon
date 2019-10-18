@@ -3,16 +3,13 @@ h1, h2, h3, h4, p, li{
     font-family: 'Lobster', cursive;
 }
 
+
 li {
     font-size: 20px;
 }
 
 body {
-
-}
-
-#grad {
-  background-image: linear-gradient(to bottom right, red, yellow);
+    background-color: #ff99bb;
 }
 
 

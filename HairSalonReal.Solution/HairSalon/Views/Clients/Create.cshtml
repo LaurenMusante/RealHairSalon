@@ -1,36 +1,25 @@
+@{
+    Layout = "_Layout";
+}
 @model HairSalon.Models.Client
+<h1>Add a new client</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+        <br>
+        @Html.LabelFor(model => model.HairType)
+        @Html.TextBoxFor(model => model.HairType)
+        <br>
+        @Html.LabelFor(model => model.ServiceNeeded)
+        @Html.TextBoxFor(model => model.ServiceNeeded)  
+        <br>         
+        @Html.LabelFor(model => model.Stylist)
+        @Html.DropDownList("StylistId");
+        <hr>
+        <input type="submit" value="Add new client" class="btn btn-success" />
+        <hr>
+    }
+    <h2>@Html.ActionLink("Show all clients", "Index")</h2>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8'>
-    <title>Clients</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-    <h1>Add a new client</h1>
-        @using (Html.BeginForm())
-        {
-            @Html.LabelFor(model => model.Name)
-            @Html.TextBoxFor(model => model.Name)
-            <br>
-            @Html.LabelFor(model => model.HairType)
-            @Html.TextBoxFor(model => model.HairType)
-            <br>
-            @Html.LabelFor(model => model.ServiceNeeded)
-            @Html.TextBoxFor(model => model.ServiceNeeded)  
-            <br>         
-            @Html.LabelFor(model => model.Stylist)
-            @Html.DropDownList("StylistId");
-            <hr>
-            <input type="submit" value="Add new client" class="btn btn-success" />
-            <hr>
-        }
-        <h2>@Html.ActionLink("Show all clients", "Index")</h2>
-    </div>
-</body>
-</html>
 

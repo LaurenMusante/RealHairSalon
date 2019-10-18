@@ -1,0 +1,12 @@
+@model HairSalon.Models.Category
+
+<h4>Add a new stylist to your directory</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Specialty)
+    @Html.TextBoxFor(model => model.Specialty)
+    <input type="submit" value="Add Stylist" />
+}
+<p>@Html.ActionLink("Show all Stylists", "Index")</p>

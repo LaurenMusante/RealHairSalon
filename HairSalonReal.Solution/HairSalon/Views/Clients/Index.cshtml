@@ -1,26 +1,31 @@
-@model HairSalon.Models.Client
+@using HairSalon.Models
+@model List<HairSalon.Models.Client>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
-    <title>Add Client</title>
+    <title>Clients</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
 </head>
+<body>
     <div class="container">
-    <h4>Add a new client</h4>
-        @using (Html.BeginForm())
+        <h1> Your Current Clients: </h1>
+        @if (@Model.Count == 0)
         {
-            @Html.LabelFor(model => model.Name)
-            @Html.TextBoxFor(model => model.Name)
-            <br>
-            @Html.LabelFor(model => model.HairType)
-            @Html.TextBoxFor(model => model.HairType)
-            <br>
-            @Html.LabelFor(model => model.Stylist)
-            @Html.DropDownList("StylistId");
-        }
-    </div>
-</html>
+        <h3>You have no clients yet.</h3>
+        } 
 
+        <ul>
+            @foreach (Client client in Model)
+            {
+              <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name  </li>
+            }
+        </ul>
+
+        <p>@Html.ActionLink("Add new client", "Create")</p>
+        <p>@Html.ActionLink("Home", "Index", "Home")</p>
+    </div>
+</body>
+</html>

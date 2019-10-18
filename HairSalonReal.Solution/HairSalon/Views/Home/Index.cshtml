@@ -7,14 +7,16 @@
     <meta charset='utf-8'>
     <title>Clients</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link href="/wwwrootcss/styles.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
 </head>
-
-<div class = "container">
-    <div class = "jumbotron">
-        <h1>✂️ Hello Claire ✂️</h1> 
+<body>
+    <div class = "container">
+        <div class = "jumbotron">
+            <h1>✂️ Hello Claire ✂️</h1> 
+        </div>
+        <h3><em>What would you like to do today?</em></h3>
+        <h2>@Html.ActionLink("See all stylists", "Index", "Stylists")</h2>
+        <h2>@Html.ActionLink("See all clients", "Index", "Clients")</h2>
     </div>
-    <h3><em>What would you like to do today?</em></h3>
-    <h2>@Html.ActionLink("See all stylists", "Index", "Stylists")</h2>
-    <h2>@Html.ActionLink("See all clients", "Index", "Clients")</h2>
-</div>
+</body>

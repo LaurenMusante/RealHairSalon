@@ -2,27 +2,30 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <title>Clients</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link href="/wwwrootcss/styles.css" rel="stylesheet" type="text/css" />
-</head>
-    <div class="container">
-    <h4>Add a new stylist</h4>
-        @using (Html.BeginForm())
-        {
-            @Html.LabelFor(model => model.Name)
-            @Html.TextBoxFor(model => model.Name)
-            <br>
-            @Html.LabelFor(model => model.Specialty)
-            @Html.TextBoxFor(model => model.Specialty)
-            <br>
+    <head>
+        <meta charset='utf-8'>
+        <title>Clients</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+        <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+        <h1>Add a new stylist</h1>
+            @using (Html.BeginForm())
+            {
+                @Html.LabelFor(model => model.Name)
+                @Html.TextBoxFor(model => model.Name)
+                <br>
+                @Html.LabelFor(model => model.Specialty)
+                @Html.TextBoxFor(model => model.Specialty)
+                <br>
 
-            <input type="submit" value="Add Stylist" />
-        }
-    </div>
+                <input type="submit" value="Add Stylist" class="btn btn-success" />
+            }
+        </div>
+    </body>
 </html>
 
 
-<p>@Html.ActionLink("Show all Stylists", "Index")</p>
+<h2>@Html.ActionLink("Show all Stylists", "Index")</h2>

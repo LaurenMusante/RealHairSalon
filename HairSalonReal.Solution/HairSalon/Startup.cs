@@ -23,7 +23,7 @@ namespace HairSalon
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            //next three lines are configuration for Entity framework. These options are enabled through ToDoListContext.cs
+   
             services.AddEntityFrameworkMySql()
               .AddDbContext<HairSalonContext>(options => options
               .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));

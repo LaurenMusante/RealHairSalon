@@ -6,17 +6,30 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This is a website for a salon owner named Claire to check her stylists and clients, to add a new stylist, and to add a new client_
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+_Make a database called lauren_musante with the following tables:_
+* _clients_
+* _stylists_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_The "clients" table needs the following columns:_ 
+* _ClientId_ (Primary Key)
+* _Name_
+* _StylistId_
+* _ServiceNeeded_
+
+_The "stylists" table needs the following columns:_ 
+* _StylistId_ (Primary Key)
+* _Name_
+* _Specialty_
+
+Clone [this repository](https://github.com/LaurenMusante/RealHairSalon). 
+Run dotnet run from the HairSalon directory.
+Run dotnet run watch from the HairSalon directory.
+Open http://localhost:5000 in your browser.
+
 
 ## Known Bugs
 
